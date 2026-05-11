@@ -121,15 +121,15 @@ export function Contact() {
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-paper/55">
           <div>
-            <div className="eyebrow text-paper/40 mb-3">Registered office</div>
+            <div className="eyebrow text-paper/40 mb-3">Office</div>
             <address className="not-italic font-serif text-lg leading-snug text-paper/80">
               Shivam Technologies
               <br />
-              12B, Damdama Lake Road
+              Unit 704, Palm Court
               <br />
-              Sahjawas (170), Rithoj
+              Sector 16, MG Road
               <br />
-              Gurgaon, Haryana — 122102
+              Gurgaon, Haryana — 122207
               <br />
               India
             </address>
