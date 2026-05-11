@@ -74,10 +74,59 @@ export function Contact() {
         </div>
 
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-paper/15 pt-10 text-sm text-paper/60">
-          <Link label="GitHub" href="https://github.com/shivama205" />
-          <Link label="LinkedIn" href="#" />
-          <Link label="X / Twitter" href="#" />
-          <Link label="Book a call" href="#" />
+          <Link
+            label="GitHub"
+            href="https://github.com/shivama205"
+            external
+          />
+          <Link
+            label="LinkedIn"
+            href="https://www.linkedin.com/in/shivama205"
+            external
+          />
+          <Link
+            label="Substack"
+            href="https://shivama205.substack.com"
+            external
+          />
+          <Link label="Email" href="mailto:shivama205@gmail.com" />
+        </div>
+
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-paper/55">
+          <div>
+            <div className="eyebrow text-paper/40 mb-3">Registered office</div>
+            <address className="not-italic font-serif text-lg leading-snug text-paper/80">
+              Shivam Technologies
+              <br />
+              12B, Damdama Lake Road
+              <br />
+              Sahjawas (170), Rithoj
+              <br />
+              Gurgaon, Haryana — 122102
+              <br />
+              India
+            </address>
+          </div>
+          <div>
+            <div className="eyebrow text-paper/40 mb-3">Working hours</div>
+            <p className="font-serif text-lg leading-snug text-paper/80">
+              IST mornings for Asia / EU
+              <br />
+              IST evenings for US
+              <br />
+              Async-friendly otherwise
+            </p>
+          </div>
+          <div>
+            <div className="eyebrow text-paper/40 mb-3">For</div>
+            <p className="font-serif text-lg leading-snug text-paper/80">
+              Founders · operators
+              <br />
+              Engineering leaders
+              <br />
+              Teams shipping AI in production
+            </p>
+          </div>
         </div>
       </div>
 
@@ -91,10 +140,21 @@ export function Contact() {
   );
 }
 
-function Link({ label, href }: { label: string; href: string }) {
+function Link({
+  label,
+  href,
+  external = false,
+}: {
+  label: string;
+  href: string;
+  external?: boolean;
+}) {
   return (
     <a
       href={href}
+      {...(external
+        ? { target: "_blank", rel: "noopener noreferrer" }
+        : {})}
       className="group inline-flex items-center justify-between gap-3 text-paper hover:text-accent-soft transition-colors"
     >
       <span className="link-u">{label}</span>

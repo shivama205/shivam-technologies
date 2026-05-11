@@ -8,26 +8,41 @@ const posts = [
   {
     date: "Apr 2026",
     kind: "Essay",
-    title: "Why your RAG eval lies — and what to measure instead",
-    href: "#",
+    title: "You don't have a GPU problem. You have an embedding problem.",
+    href: "https://shivama205.substack.com/p/you-dont-have-a-gpu-problem-you-have",
   },
   {
-    date: "Feb 2026",
-    kind: "Notes",
-    title: "The unglamorous half of agent engineering",
-    href: "#",
+    date: "Mar 2026",
+    kind: "Essay",
+    title:
+      "Most eval frameworks assume RAG. Your AI product probably isn't.",
+    href: "https://shivama205.substack.com/p/most-eval-frameworks-assume-rag-your",
+  },
+  {
+    date: "Mar 2026",
+    kind: "Essay",
+    title: "Your codebase is illegible to AI. Here's what we did about it.",
+    href: "https://shivama205.substack.com/p/your-codebase-is-illegible-to-ai",
   },
   {
     date: "Dec 2025",
-    kind: "Talk",
-    title: "Shipping AI features without a 20-person team",
-    href: "#",
+    kind: "Deep dive",
+    title:
+      "Understanding softmax: the mathematical foundation behind transformer attention",
+    href: "https://shivama205.substack.com/p/understanding-softmax-the-mathematical",
   },
   {
     date: "Oct 2025",
     kind: "Essay",
-    title: "Production prompts are not chat prompts",
-    href: "#",
+    title:
+      "The stability/expressivity duality: architectural trade-offs in modern LLMs",
+    href: "https://shivama205.substack.com/p/the-stabilityexpressivity-duality",
+  },
+  {
+    date: "Aug 2025",
+    kind: "Build log",
+    title: "Building a production-ready insurance chatbot with Google ADK",
+    href: "https://shivama205.substack.com/p/building-a-production-ready-insurance",
   },
 ];
 
@@ -73,6 +88,8 @@ export function Writing() {
                 >
                   <a
                     href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     data-cursor="hover"
                     className="group flex items-baseline justify-between gap-6 py-6 hover:bg-paper transition-colors duration-300 px-2 -mx-2 rounded-lg"
                   >
@@ -119,12 +136,18 @@ export function Writing() {
                   </a>
                 </li>
               ))}
-              <li>
+              <li className="flex flex-col gap-3 pt-2">
                 <a
-                  href="https://github.com/shivama205"
+                  href="https://shivama205.substack.com"
                   className="link-u text-ink text-sm"
                 >
-                  View everything on GitHub
+                  Read everything on Substack
+                </a>
+                <a
+                  href="https://github.com/shivama205"
+                  className="link-u text-ink-soft text-sm"
+                >
+                  Code on GitHub
                 </a>
               </li>
             </ul>
