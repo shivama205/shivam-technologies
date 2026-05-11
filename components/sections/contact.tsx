@@ -55,11 +55,34 @@ export function Contact() {
           </p>
         </FadeIn>
 
-        <div className="mt-14 flex flex-col sm:flex-row gap-8 sm:items-center">
+        <div className="mt-14 flex flex-col gap-6">
+          <Magnetic>
+            <a
+              href="https://calendar.app.google/9Soe5MXewsfhHXka8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-4 px-7 py-5 rounded-full bg-accent text-paper text-base md:text-lg font-medium hover:bg-accent-soft transition-colors w-fit"
+            >
+              <span aria-hidden className="text-xl leading-none">◐</span>
+              Book a 30-min call
+              <span
+                aria-hidden
+                className="inline-block transition-transform group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </a>
+          </Magnetic>
+
+          <div className="flex items-center gap-4 text-paper/60 text-sm">
+            <span className="block h-px w-10 bg-paper/30" />
+            <span className="eyebrow">or email me directly</span>
+          </div>
+
           <Magnetic>
             <a
               href="mailto:shivama205@gmail.com"
-              className="group inline-flex items-center gap-4 text-2xl md:text-4xl font-serif text-paper hover:text-accent-soft transition-colors"
+              className="group inline-flex items-center gap-4 text-xl md:text-3xl font-serif text-paper hover:text-accent-soft transition-colors w-fit"
             >
               shivama205@gmail.com
               <span
@@ -72,7 +95,12 @@ export function Contact() {
           </Magnetic>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-paper/15 pt-10 text-sm text-paper/60">
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-5 gap-6 border-t border-paper/15 pt-10 text-sm text-paper/60">
+          <Link
+            label="Book a call"
+            href="https://calendar.app.google/9Soe5MXewsfhHXka8"
+            external
+          />
           <Link
             label="GitHub"
             href="https://github.com/shivama205"

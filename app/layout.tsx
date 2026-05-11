@@ -18,6 +18,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://niym.ai"),
   title: "Shivam Technologies — AI products, built with care.",
   description:
     "A senior engineer working directly with founders and teams to design and ship AI features and automation workflows.",
@@ -26,6 +27,14 @@ export const metadata: Metadata = {
     description:
       "AI products, built with care. AI consulting and automation, shipped end-to-end.",
     type: "website",
+    url: "https://niym.ai",
+    siteName: "Shivam Technologies",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shivam Technologies — AI products, built with care.",
+    description:
+      "AI consulting and automation, shipped end-to-end. Senior engineer, working directly with founders and teams.",
   },
 };
 

@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/cn";
 
+const BOOKING_URL = "https://calendar.app.google/9Soe5MXewsfhHXka8";
+
 const links = [
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
@@ -53,10 +55,12 @@ export function Nav() {
             </a>
           ))}
           <a
-            href="#contact"
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="ml-2 inline-flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-full bg-ink text-paper hover:bg-accent transition-colors"
           >
-            Start a project
+            Book a call
             <span aria-hidden>→</span>
           </a>
         </nav>
@@ -102,11 +106,13 @@ export function Nav() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className="mt-2 inline-flex items-center justify-center gap-2 text-sm font-medium px-4 py-3 rounded-full bg-ink text-paper"
               >
-                Start a project <span aria-hidden>→</span>
+                Book a call <span aria-hidden>→</span>
               </a>
             </div>
           </motion.div>

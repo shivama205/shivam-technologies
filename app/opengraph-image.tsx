@@ -214,7 +214,7 @@ export default async function Image() {
                 color: "#8a8a82",
               }}
             >
-              shivamtechnologies.vercel.app
+              niym.ai
             </div>
             <div
               style={{
