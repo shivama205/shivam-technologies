@@ -59,7 +59,6 @@ export function Contact() {
           <Magnetic>
             <a
               href="mailto:shivama205@gmail.com"
-              data-cursor="hover"
               className="group inline-flex items-center gap-4 text-2xl md:text-4xl font-serif text-paper hover:text-accent-soft transition-colors"
             >
               shivama205@gmail.com

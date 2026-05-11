@@ -44,14 +44,6 @@ body {
   font-feature-settings: "liga", "kern";
 }
 
-/* Custom cursor — hide native cursor on hoverable devices */
-@media (hover: hover) and (pointer: fine) {
-  html.has-custom-cursor,
-  html.has-custom-cursor * {
-    cursor: none !important;
-  }
-}
-
 /* Grain texture (subtle paper feel) */
 .grain::before {
   content: "";

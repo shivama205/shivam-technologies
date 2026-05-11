@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { RevealText } from "@/components/motion/reveal-text";
 import { FadeIn } from "@/components/motion/fade-in";
@@ -19,22 +18,37 @@ export function About() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-10%" }}
             transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
-            className="relative aspect-[4/5] w-full max-w-sm rounded-2xl overflow-hidden bg-paper-2"
+            className="relative aspect-[4/5] w-full max-w-sm rounded-2xl overflow-hidden bg-ink"
           >
-            <Image
-              src="/shivam.jpg"
-              alt="Shivam — founder of Shivam Technologies"
-              fill
-              priority={false}
-              sizes="(min-width: 1024px) 420px, 100vw"
-              className="object-cover"
+            <div
+              aria-hidden
+              className="absolute inset-0 opacity-70"
+              style={{
+                background:
+                  "radial-gradient(120% 80% at 20% 0%, rgba(194,65,12,0.55), transparent 55%), radial-gradient(80% 60% at 100% 100%, rgba(124,58,237,0.35), transparent 60%), #1a1a1a",
+              }}
             />
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent" />
+            <div
+              aria-hidden
+              className="absolute inset-0 mix-blend-overlay opacity-20"
+              style={{
+                backgroundImage:
+                  "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
+                backgroundSize: "200px 200px",
+              }}
+            />
+
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="font-serif text-[14rem] leading-none text-paper/90 select-none">
+                S
+              </div>
+            </div>
+
             <div className="absolute top-6 left-6 right-6 flex items-start justify-between text-paper">
               <span className="eyebrow drop-shadow-sm">Shivam · Founder</span>
               <span className="font-mono text-xs drop-shadow-sm">est. 2026</span>
             </div>
-            <div className="absolute bottom-6 left-6 right-6 text-paper/90">
+            <div className="absolute bottom-6 left-6 right-6 text-paper">
               <div className="font-serif text-2xl leading-tight">
                 Shivam Aggarwal
               </div>

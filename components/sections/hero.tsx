@@ -80,7 +80,6 @@ export function Hero() {
           <Magnetic>
             <a
               href="#contact"
-              data-cursor="hover"
               className="group inline-flex items-center gap-3 px-7 py-4 rounded-full bg-ink text-paper text-sm font-medium hover:bg-accent transition-colors"
             >
               Start a project
